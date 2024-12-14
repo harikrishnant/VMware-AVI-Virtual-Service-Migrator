@@ -28,14 +28,14 @@ NSX ALB API Versions 18.1.2 till 30.2.2
 - Improved job status reporting options. Status spreadsheets are generated in *.xlsx format for each of the migration modes.
 - Included tracking of skipped settings as part of migration in a separate spreadsheet which can be reviewed post-migration of a batch.
 - Added support for migrating virtual services that have WAF policies without a PSM group (learning group)
-- Added support to scan AVI objects to identify possible naming duplications that can prevent a successful virtual service migration. Any naming duplicates, if found will be tracked as a separate spreadsheet which can be reviewed for action.
+- Added support to scan AVI objects to identify possible naming duplications that can prevent a successful virtual service migration. Any naming duplicates if found, will be tracked as a separate spreadsheet which can be reviewed for action.
 
 **Issues fixed**
 - TULSI-005 : An issue preventing a successful cleanup of virtual services of type TLS-SNI / EVH is now fixed.
 - TULSI-006 : Virtual service migration failues caused as part of WAF learning groups, custom datascripts and L4 policy sets are handled gracefully using skipped settings workflow. Entries in the skipped settings output will be a manual administrator task.
 - TULSI-007 : Error, Warning and Info message customizations with color codes is completed.
 - TULSI-008 : An issue preventing user prompt while an incorrect virtual service name is supplied is now fixed.
-- TULSI-009 : An issue when remove_prefix and cleanup modes are returning success messages in a specific scenario is now fixed.
+- TULSI-009 : An issue where remove_prefix and cleanup modes are returning success messages in a specific scenario is now fixed.
 - TULSI-010 : An issue causing migration failures when duplicate object names are detected in the AVI tenant is now handled through a separate workflow.
 - TULSI-011 : An issue causing migration failures for Parent-Child virtual services as part of API changes in 30.x versions is now fixed.
 
