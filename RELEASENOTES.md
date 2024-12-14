@@ -1,3 +1,60 @@
+# VMware AVI Virtual Service Migrator 1.4 Release Notes
+This release notes cover the following topics:
+- Document Revision History
+- Supported VMware AVI Versions
+- What's New
+- Known Limitations
+
+**Document Revision History**
+
+First Edition - March 03, 2022
+
+Second Edition - July 24, 2022
+
+Third Edition - July 6, 2023
+
+Fourth Edition - July 19, 2023
+
+Fifth Edition - December 14, 2024
+
+**Supported VMware AVI Versions**
+
+NSX ALB API Versions 18.1.2 till 30.2.2
+
+**Whats's New**
+- Naming changes - NSX ALB Virtual Service Migrator is now renamed as VMware AVI Virtual Service Migrator
+- Added option to generate migration planner workbook to assist with organizing AVI virtual services into migration batches. This will accelerate the migration planning phase.
+- Consolidated the workflows for migrating virtual services of type "Normal" and "SNI_EVH", which was handled as separate workflows in the previous versions. The migration flag "-q" or "--virtual_hosted_vs" is now deprecated. This enhancement will reduce the number of migration batches involved.
+- Improved job status reporting options. Status spreadsheets are generated in *.xlsx format for each of the migration modes.
+- Included tracking of skipped settings as part of migration in a separate spreadsheet which can be reviewed post-migration of a batch.
+- Added support for migrating virtual services that have WAF policies without a PSM group (learning group)
+- Added support to scan AVI objects to identify possible naming duplications that can prevent a successful virtual service migration. Any naming duplicates, if found will be tracked as a separate spreadsheet which can be reviewed for action.
+
+**Issues fixed**
+- TULSI-005 : An issue preventing a successful cleanup of virtual services of type TLS-SNI / EVH is now fixed.
+- TULSI-006 : Virtual service migration failues caused as part of WAF learning groups, custom datascripts and L4 policy sets are handled gracefully using skipped settings workflow. Entries in the skipped settings output will be a manual administrator task.
+- TULSI-007 : Error, Warning and Info message customizations with color codes is completed.
+- TULSI-008 : An issue preventing user prompt while an incorrect virtual service name is supplied is now fixed.
+- TULSI-009 : An issue when remove_prefix and cleanup modes are returning success messages in a specific scenario is now fixed.
+- TULSI-010 : An issue causing migration failures when duplicate object names are detected in the AVI tenant is now handled through a separate workflow.
+- TULSI-011 : An issue causing migration failures for Parent-Child virtual services as part of API changes in 30.x versions is now fixed.
+
+**Known Issues**
+- TULSI-012 : Status output directories of migrate, remove_prefix and cleanup modes will be overwritten during each migration batch. 
+   - Workaround : Manually backup the directories before a new migration batch is run.
+
+**Known Limitations**
+
+The below VMware AVI features are not yet tested with VMware AVI Virtual Service Migrator and hence migration of below features may or may not work as expected.
+- VMware AVI Controllers with SAML / LDAP configured. Currently only local accounts are supported
+- Any datascripts with mention of pools / pool groups need to be manually updated post migration
+- GSLB Applications are not updated with migrated virtual services information
+- For NSX-T VLAN backed clouds, the placement networks for each virtual service need to be manually added. This is a VMware AVI Cloud connector limitation
+- Doesn't support cross-tenant migration
+
+![VxPlanet.com](https://serveritpro.files.wordpress.com/2021/09/vxplanet_correct.png)
+
+
 # NSX ALB Virtual Service Migrator 1.3 Release Notes
 This release notes cover the following topics:
 - Document Revision History
