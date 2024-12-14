@@ -37,7 +37,7 @@ NSX ALB API Versions 18.1.2 till 30.2.2
 - TULSI-008 : An issue preventing user prompt while an incorrect virtual service name is supplied is now fixed.
 - TULSI-009 : An issue where remove_prefix and cleanup modes are returning success messages in a specific scenario is now fixed.
 - TULSI-010 : An issue causing migration failures when duplicate object names are detected in the AVI tenant is now handled through a separate workflow.
-- TULSI-011 : An issue causing migration failures for Parent-Child virtual services as part of API changes in 30.x versions is now fixed.
+- TULSI-011 : An issue causing migration failures for Parent-Child virtual services as part of API changes in AVI 30.x version is now fixed.
 
 **Known Issues**
 - TULSI-012 : Status output directories of migrate, remove_prefix and cleanup modes will be overwritten during each migration batch. 
