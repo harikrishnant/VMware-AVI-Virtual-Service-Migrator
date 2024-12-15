@@ -21,7 +21,7 @@ Fifth Edition - December 14, 2024
 
 VMware AVI API Versions 18.1.2 till 30.2.2
 
-**Whats's New**
+**What's New**
 - Naming changes - NSX ALB Virtual Service Migrator is now renamed as VMware AVI Virtual Service Migrator
 - Added option to generate migration planner workbook to assist with organizing AVI virtual services into migration batches. This will accelerate the migration planning phase.
 - Consolidated the workflows for migrating virtual services of type "Normal" and "SNI_EVH", which was handled as separate workflows in the previous versions. The migration flag "-q" or "--virtual_hosted_vs" is now deprecated. This enhancement will reduce the number of migration batches involved.
@@ -76,7 +76,7 @@ Fourth Edition - July 19, 2023
 
 NSX ALB API Versions 18.1.2 till 22.1.3
 
-**Whats's New**
+**What's New**
 - Added support for migration of virtual services which are part of Virtual Service Hosting (Parent-Child relationships)
      -  An new migration flag "-q" / "--virtual_hosted_vs" added to the migration mode to handle Parent and Child virtual services migration
      -  Parent-Child virtual services part of TLS-SNI hosting can be now migrated to any supported cloud account.
@@ -124,7 +124,7 @@ Third Edition - July 6, 2023
 
 NSX ALB API Versions 18.1.2 till 22.1.3
 
-**Whats's New**
+**What's New**
 - NSX ALB Cloud Migrator is now NSX ALB Virtual Service Migrator
 - Added support till NSX ALB version 22.1.3
 - Added support for virtual service migration with IPAM profiles
@@ -175,7 +175,7 @@ Second Edition - July 24, 2022
 
 NSX ALB API Versions 18.1.2 till 21.1.4
 
-**Whats's New**
+**What's New**
 - Added support till NSX ALB version 21.1.4
 - Completely written using Python Classes and Objects (Object oriented)
 - Completely switched the script execution mode from interactive to parameter based. Tool supports three execution modes: a) Migration b) Cleanup and c) remove_prefix
@@ -219,7 +219,7 @@ First Edition - March 03, 2022
 
 NSX ALB API Versions 18.1.2 till 21.1.2
 
-**Whats's New**
+**What's New**
 - Ability to migrate Virtual services and dependencies (Pools, PoolGroups, HTTPPolicySets, VSVIPs) across NSX ALB Cloud Accounts:
      - Migration from vCenter Cloud Account to No-Orchestrator Cloud
      - Migration from No-Orchestrator Cloud to vCenter Cloud Account
