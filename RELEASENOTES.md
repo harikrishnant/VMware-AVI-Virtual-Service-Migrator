@@ -19,7 +19,7 @@ Fifth Edition - December 14, 2024
 
 **Supported VMware AVI Versions**
 
-NSX ALB API Versions 18.1.2 till 30.2.2
+VMware AVI API Versions 18.1.2 till 30.2.2
 
 **Whats's New**
 - Naming changes - NSX ALB Virtual Service Migrator is now renamed as VMware AVI Virtual Service Migrator
